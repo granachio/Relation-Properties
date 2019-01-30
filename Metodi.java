@@ -238,4 +238,23 @@ public class Metodi{
 		}
 		System.out.println();
 	}
+	
+	// Funziona solo se la Relazione è un Insieme parzialmente ordinato (poset), restituisce true se la coppia ordinata deriva dalla transitività, false altrimenti.
+	public static boolean coppiaTransitiva(String a1, String b1, String[] a, String[] b){
+		if(a.length != b.length)
+			return false;
+		
+		for(int i = 0; i < b.length; i++){
+			if(!a[i].equals(b[i])){
+				if(b[i].equals(b1) && !a[i].equals(a1)){
+					String sx = a[i];
+					for(int j = 0; j < a.length; j++){
+						if(a[j].equals(a1) && b[j].equals(sx))
+							return true;
+					}
+				}
+			}	
+		}
+		return false;
+	}
 }

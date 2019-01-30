@@ -42,6 +42,7 @@ public class Programma{
 			System.out.println("Relazione incompatibile con Insiemi di partenza e arrivo.");
 			System.exit(-1);
 		}
+		
 		boolean riflessiva = Metodi.isRiflessiva(first, second);
 		boolean simmetrica = Metodi.isSimmetrica(first, second);
 		boolean transitiva = Metodi.isTransitiva(first, second);
